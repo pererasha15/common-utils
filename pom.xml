@@ -4,7 +4,7 @@
 
   <groupId>com.chronica</groupId>
   <artifactId>common-utils</artifactId>
-  <version>1.10</version>
+  <version>1.11-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.source>22</maven.compiler.source>
@@ -24,7 +24,7 @@
     <connection>scm:git:https://github.com/pererasha15/common-utils.git</connection>
     <developerConnection>scm:git:https://github.com/pererasha15/common-utils.git</developerConnection>
     <url>https://github.com/pererasha15/common-utils</url>
-    <tag>common-utils-1.10</tag>
+    <tag>my-utils-1.0.12</tag>
   </scm>
 
 </project>
