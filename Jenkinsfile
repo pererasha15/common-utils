@@ -34,7 +34,7 @@ pipeline {
                       echo "*** Deploying to release repo ***"
                       withCredentials([gitUsernamePassword(credentialsId: 'git-pat-26-2', gitToolName: 'git-tool')]) {
                         sh '''
-                          ./mvnw release:prepare -DscmCommentPrefix="JIRA:MAINT-000000 "
+                          ./mvnw release:prepare -DscmCommentPrefix="JIRA:MAINT-00000 "
                           ./mvnw release:perform
                         '''
                       }
