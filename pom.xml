@@ -2,16 +2,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.chronica</groupId>
-    <artifactId>common-utils</artifactId>
-    <version>1.0-SNAPSHOT</version>
+  <groupId>com.chronica</groupId>
+  <artifactId>common-utils</artifactId>
+  <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>22</maven.compiler.source>
-        <maven.compiler.target>22</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    
+  <properties>
+    <maven.compiler.source>22</maven.compiler.source>
+    <maven.compiler.target>22</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>pererasha15</name>
+      <url>https://maven.pkg.github.com/pererasha15/common-utils</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/pererasha15/common-utils.git</connection>
+    <developerConnection>scm:git:https://github.com/pererasha15/common-utils.git</developerConnection>
+    <url>https://github.com/pererasha15/common-utils</url>
+    <tag>my-utils-1.0.12</tag>
+  </scm>
+
 </project>
