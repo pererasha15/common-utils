@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GITHUB_PAT = credentials('git-pat-26-2').PSW
+        GITHUB_PAT = credentials('git-pat-26-2')
     }
     stages {
         stage('Build') {

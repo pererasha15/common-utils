@@ -5,7 +5,7 @@
     <server>
       <id>github</id>
       <username>pererasha15</username>
-      <password>${env.GITHUB_PAT}</password>
+      <password>${env.GITHUB_PAT_PSW}</password>
     </server>
   </servers>
 </settings>
