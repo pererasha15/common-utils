@@ -1,6 +1,8 @@
 pipeline {
     agent any
     environment {
+        SONAR_TOKEN = credentials('sonar-token')
+        GITHUB_PAT = credentials('github-pat')
     }
     stages {
         stage('Build') {
