@@ -33,7 +33,7 @@ pipeline {
                   } else {
                     if ('main'.equals(env.BRANCH_NAME)) {
                       echo "*** Deploying to release repo ***"
-                      withCredentials([gitUsernamePassword(credentialsId: 'Pererasha-Github', gitToolName: 'git-tool')]) {
+                      withCredentials([gitUsernamePassword(credentialsId: 'git-pat-26-2', gitToolName: 'git-tool')]) {
                         sh '''
                           ./mvnw release:prepare -DscmCommentPrefix="JIRA:MAINT-000000 "
                           ./mvnw release:perform
