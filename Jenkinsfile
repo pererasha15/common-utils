@@ -49,10 +49,10 @@ pipeline {
 
                       echo "version=$versionName"
 
-                      sh '''
+                      sh """
                         ./mvnw versions:set -DnewVersion="${versionName}""
                         ./mvnw deploy
-                      '''
+                      """
                     }
                   }
                 }
