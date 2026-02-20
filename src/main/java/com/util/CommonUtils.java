@@ -3,7 +3,7 @@ package com.util;
 public class CommonUtils {
   /**
    *
-   * @param str
+   * @param strs
    * @return
    */
   public static boolean isNull(final String str) {
