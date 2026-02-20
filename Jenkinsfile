@@ -44,7 +44,11 @@ pipeline {
                       }
                     } else {
                       echo "*** Deploying to snapshot repo ***"
+                      def safeBranch = env.BRANCH_NAME.replaceAll('[^a-zA-Z0-9]', '-')
+                      def versionName = version.replace("-SNAPSHOT", "") + "-" + safeBranch + "-SNAPSHOT"
+
                       sh '''
+                        ./mvnw versions:set -DnewVersion=${versionName}"
                         ./mvnw deploy
                       '''
                     }
