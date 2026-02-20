@@ -48,7 +48,7 @@ pipeline {
                       def versionName = version.replace("-SNAPSHOT", "") + "-" + safeBranch + "-SNAPSHOT"
 
                       sh '''
-                        ./mvnw versions:set -DnewVersion=${versionName}"
+                        ./mvnw versions:set -DnewVersion=${versionName}
                         ./mvnw deploy
                       '''
                     }
