@@ -4,7 +4,7 @@
 
   <groupId>com.chronica</groupId>
   <artifactId>common-utils</artifactId>
-  <version>1.17-SNAPSHOT</version>
+  <version>1.16-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.source>22</maven.compiler.source>
