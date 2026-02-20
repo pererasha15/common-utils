@@ -16,7 +16,7 @@
     <repository>
       <id>github</id>
       <name>pererasha15</name>
-      <url>https://maven.pkg.github.com/xyzx/common-utils</url>
+      <url>https://maven.pkg.github.com/pererasha15/common-utils</url>
     </repository>
   </distributionManagement>
 

@@ -33,10 +33,14 @@ pipeline {
                     if ('main'.equals(env.BRANCH_NAME)) {
                       echo "*** Deploying to release repo ***"
                       withCredentials([gitUsernamePassword(credentialsId: 'git-pat-26-2', gitToolName: 'git-tool')]) {
-                        sh '''
-                          ./mvnw release:prepare -DscmCommentPrefix="JIRA:MAINT-00000 "
-                          ./mvnw release:perform
-                        '''
+                        try {
+                          sh './mvnw release:prepare -B -Dresume=false -DscmCommentPrefix="JIRA:MAINT-00000 "'
+                          sh './mvnw release:perform'
+                        } catch (err) {
+                          sh './mvnw release:rollback'
+                          sh 'git push --delete origin $(git describe --abbrev=0 --tags)'
+                          throw err
+                        }
                       }
                     } else {
                       echo "*** Deploying to snapshot repo ***"
